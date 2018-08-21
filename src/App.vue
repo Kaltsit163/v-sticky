@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img v-sticky="stickyConfig" src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -20,10 +20,15 @@
 </template>
 
 <script>
+import VueSticky from './lib/sticky/index.js'
 export default {
   name: 'app',
   data () {
     return {
+      stickyConfig: {
+        zIndex: 10,
+        stickyTop: 0
+      },
       msg: 'Welcome to Your Vue.js App'
     }
   }
@@ -38,7 +43,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  min-height: 5000px;
 }
+
 
 h1, h2 {
   font-weight: normal;
