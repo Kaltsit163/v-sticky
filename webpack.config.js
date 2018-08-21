@@ -6,8 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'v-sticky.js',
-    library: 'VSticky',
+    filename: 'vv-sticky.js',
+    library: 'VVSticky',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
